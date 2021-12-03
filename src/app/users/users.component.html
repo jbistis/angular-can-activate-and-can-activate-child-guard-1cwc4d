@@ -1,0 +1,10 @@
+<div class="container-fluid">
+	<ul class="list-group">
+		<li 
+      class="list-group-item"
+      *ngFor="let user of (users$ | async)">
+      <a [routerLink]="user.id">{{ user.name }}</a>
+    </li>
+	</ul>
+  <router-outlet></router-outlet>
+</div>
